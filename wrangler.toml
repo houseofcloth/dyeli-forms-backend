@@ -1,0 +1,18 @@
+name = "dyeli-forms-backend"
+main = "./index.js"
+compatibility_date = "2022-10-18"
+workers_dev = false
+
+services = [
+  # Session Worker
+  { binding = "SESSION", service = "session", environment = "production" }
+]
+
+kv_namespaces = [
+  # Session KV
+  { binding = "SESSION_STORE", id = "4b1ab8a7538644b8bcf1f1379908a547", preview_id = "4b1ab8a7538644b8bcf1f1379908a547" }
+]
+
+# [vars]
+#   AIRTABLE_API_KEY = "keyWHPGadoXKpsqno"
+#   AIRTABLE_BASE_ID = "appGw8TkfEJdfxvBd"
