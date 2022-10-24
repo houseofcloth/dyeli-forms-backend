@@ -1,18 +1,19 @@
 name = "dyeli-forms-backend"
 main = "./index.js"
 compatibility_date = "2022-10-18"
+# Don't want is accessible directly via URL, only via service binding.
 workers_dev = false
-
-services = [
-  # Session Worker
-  { binding = "SESSION", service = "session", environment = "production" }
-]
 
 kv_namespaces = [
   # Session KV
-  { binding = "SESSION_STORE", id = "4b1ab8a7538644b8bcf1f1379908a547", preview_id = "4b1ab8a7538644b8bcf1f1379908a547" }
+  { binding = "SESSION_STORE", id = "", preview_id = "" }
 ]
 
-# [vars]
-#   AIRTABLE_API_KEY = "keyWHPGadoXKpsqno"
-#   AIRTABLE_BASE_ID = "appGw8TkfEJdfxvBd"
+[vars]
+  SAMPLES_TABLE = "Samples Orders"
+  WEB_FEEDB_TABLE = "Website Feedback"
+  ONLINE_FEEDB_TABLE = "Online Order Feedback"
+  STORE_FEEDB_TABLE = "In-store Feedback"
+
+[dev]
+  port = 8971

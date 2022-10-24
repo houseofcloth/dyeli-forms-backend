@@ -1,12 +1,17 @@
 {
   "name": "forms",
   "version": "1.0.0",
-  "description": "",
-  "main": "./v2/index.js",
+  "description": "Backend to handle form submission to Airtable with CF Worker Service bindings.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "House of Cloth",
+  "license": "MIT",
+  "contributors": [{
+    "name": "Jasiq Li",
+    "url": "https://siq.li"
+  }],
+  "devDependencies": {
+    "cookie": "^0.5.0"
+  }
 }
